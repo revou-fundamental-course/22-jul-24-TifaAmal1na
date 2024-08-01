@@ -1,0 +1,452 @@
+/* Reset browser styles */
+body, h2, p, form, input, button, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Global styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Style for the navigation */
+nav ul {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right items */
+    align-items: center;
+    list-style-type: none;
+    background-color: #333;
+    padding: 15px 20px;
+    margin: 0;
+}
+
+nav ul .left {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-right: auto; /* Pushes the left item to the far left */
+    font-family: 'Pacifico', cursive;
+}
+
+nav ul .right {
+    display: flex;
+    gap: 20px; /* Adds space between the right items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9a825;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 20px; /* Adds space below the heading and paragraph */
+}
+
+.home-header h2 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.home-header p {
+    font-size: 1.2em; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Container for both banner and contact form */
+#home-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+
+
+.banner {
+    flex: 1;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative; /* Add this to allow absolute positioning of slides */
+    overflow: hidden; /* Ensure slides don't overflow */
+}
+
+.banner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute; /* Ensure ul covers the entire banner */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Ensure list items are in a row */
+    transition: opacity 1s ease-in-out;
+}
+
+.banner li {
+    position: absolute; /* Stack slides on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner li.active {
+    opacity: 1;
+}
+
+
+#img-slide{
+    margin:15px;
+    height: 95%;
+    width:95%;
+    border-radius:5px;
+}
+
+/* Style for the contact section */
+.contact {
+    flex: 1;
+    padding: 30px 20px;
+    background-color: #333;;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: none; /* Remove the width limit */
+}
+
+/* Style for the form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Ensure the form takes the full width */
+}
+
+.contact form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact form input, .contact form button, .contact form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(220, 135, 7, 0.192);
+   
+    width: 100%; /* Ensure inputs and buttons are full width */
+}
+
+.contact form input {
+    font-size: 16px;
+}
+
+.contact form button {
+    background-color: #f9a825;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #676665;
+}
+
+/* Style for the select dropdown */
+.contact select {
+    padding: 12px; /* Tambahkan padding */
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 18px; /* Perbesar ukuran font */
+    width: 100%; /* Pastikan lebar maksimal */
+    height: 50px; /* Tambahkan tinggi untuk ukuran yang lebih besar */
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+.contact select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #f9a825; /* Highlight border color on focus */
+}
+
+/* Style for the package section */
+#packages {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#packages h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#packages p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.package-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.package-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.package-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.package-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.package-item ul li {
+    margin-bottom: 10px;
+}
+
+/* Style for the review section */
+#review {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+#review h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#review h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #f9a825;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.review-container {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.review p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.review span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Style for the promotion section */
+#promotion {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+#promotion h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+#promotion h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #f9a825;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.promotion-container {
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.promotion-item {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 3px solid; /* Define border color in a class or using CSS variables */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+
+.promotion-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #030000;
+    font-weight: bold;
+}
+
+.promotion-item p {
+    font-size: 16px;
+    color: #130202;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    #home-contact {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Style for the Call to Action section */
+#cta {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f9a825 0%, #f57c00 100%); /* Gradien untuk efek visual menarik */
+    text-align: center;
+    color: white;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+#cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+#cta p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #333; /* Dark background for the button */
+    text-decoration: none;
+    border-radius: 30px; /* Fully rounded button */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for button */
+}
+
+.cta-button:hover {
+    background-color: #333; /* Slightly lighter background on hover */
+    transform: scale(1.1); /* Enlarge the button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+/* Style for the footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center; /* Center the text */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space out the links */
+    margin-bottom: 10px; /* Space between links and copyright */
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 15px; /* Add space between links */
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #f9a825; /* Change color on hover */
+}
